@@ -2,7 +2,9 @@
 title: "Developing_Data_Products_Course_Assignment"
 author: "Peter F. Symosek"
 date: "October 24, 2016"
-output: html_document
+output: 
+  html_document: 
+    keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -19,3 +21,4 @@ lat=c(42.3386,42.3382,42.3677,42.3623,42.3737135051);lon=c(-71.0941,-71.0991,-71
 df<-data.frame(lat=lat,lon=lon,popup=names)
 df %>% leaflet() %>% addTiles() %>% addMarkers(popup=df$popup)
 ```
+
